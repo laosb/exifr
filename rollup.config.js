@@ -3,7 +3,6 @@ import {builtinModules} from 'module'
 import {fileURLToPath} from 'url'
 import path from 'path'
 import babel from 'rollup-plugin-babel'
-import notify from 'rollup-plugin-notify'
 import {terser} from 'rollup-plugin-terser'
 import * as polyfills from './src/polyfill/ie.mjs'
 import pkg from './package.json'
@@ -134,7 +133,7 @@ const babelModern = {
 		['@babel/preset-env', {
 			targets: '>1%, not dead, not ie 10-11'
 		}],
-		
+
 	],
 	"comments": false
 }
@@ -171,7 +170,6 @@ function createLegacyBundle(inputPath, outputPath) {
 	return {
 		input: inputPath,
 		plugins: [
-			notify(),
 			replaceFile('FsReader.mjs', 'export default {}'),
 			replaceFile('import.mjs',   'export default function() {}'),
 			babel(babelLegacy),
@@ -197,7 +195,6 @@ function createModernBundle(inputPath, esmPath, umdPath) {
 	return {
 		input: inputPath,
 		plugins: [
-			notify(),
 			babel(babelModern),
 			terser(terserConfig),
 			injectIgnoreComments(),
