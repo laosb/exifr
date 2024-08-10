@@ -1,6 +1,7 @@
 <img src="https://raw.githubusercontent.com/MikeKovarik/exifr/master/logo/blue-small.png" width="160" alt="exifr">
 
-> ** This is a fork of Mike Kovarik's original [exifr](https://npmjs.org/package/exifr) package. **
+> **This is a fork of Mike Kovarik's original [exifr](https://npmjs.org/package/exifr) package.**
+>
 > This fork is published as `@laosb/exifr` on npm.
 > The original package is no longer maintained, so I've forked it to add in some additional features and bug fixes from hanging PRs on the original repo.
 > Credits to Mike Kovarik, all the contributors to the original package, and various PR authors for their work on this package.
