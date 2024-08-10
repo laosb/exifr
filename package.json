@@ -1,8 +1,8 @@
 {
-  "name": "exifr",
+  "name": "@laosb/exifr",
   "version": "7.1.3",
-  "description": "📷 The fastest and most versatile JavaScript EXIF reading library.",
-  "author": "Mike Kovarik",
+  "description": "A fork of exifr, 📷 The fastest and most versatile JavaScript EXIF reading library.",
+  "author": "Shibo Lyu",
   "license": "MIT",
   "keywords": [
     "exif",
@@ -22,11 +22,11 @@
     "orientation",
     "makernote"
   ],
-  "homepage": "https://mutiny.cz/exifr/",
-  "bugs": "https://github.com/MikeKovarik/exifr/issues",
+  "homepage": "https://github.com/laosb/exifr/",
+  "bugs": "https://github.com/laosb/exifr/issues",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MikeKovarik/exifr.git"
+    "url": "https://github.com/laosb/exifr.git"
   },
   "main": "./dist/full.umd.js",
   "module": "./dist/full.esm.mjs",

@@ -1,5 +1,10 @@
 <img src="https://raw.githubusercontent.com/MikeKovarik/exifr/master/logo/blue-small.png" width="160" alt="exifr">
 
+> ** This is a fork of Mike Kovarik's original [exifr](https://npmjs.org/package/exifr) package. **
+> This fork is published as `@laosb/exifr` on npm.
+> The original package is no longer maintained, so I've forked it to add in some additional features and bug fixes from hanging PRs on the original repo.
+> Credits to Mike Kovarik, all the contributors to the original package, and various PR authors for their work on this package.
+
 [![Build Status](https://travis-ci.org/MikeKovarik/exifr.svg?branch=master)](https://travis-ci.org/MikeKovarik/exifr)
 [![Coverage Status](https://coveralls.io/repos/github/MikeKovarik/exifr/badge.svg)](https://coveralls.io/github/MikeKovarik/exifr)
 [![gzip size](http://img.badgesize.io/https://cdn.jsdelivr.net/npm/exifr/dist/mini.umd.js?compression=gzip)](https://www.jsdelivr.com/package/npm/exifr?path=dist)
@@ -509,7 +514,7 @@ TIFF Segment consists of various IFD's (Image File Directories) aka blocks.
 Notable large tags from EXIF block that are not parsed by default but can be enabed if needed.
 
 * `options.makerNote` type: `bool` default: `false`
-<br>0x927C MakerNote tag 
+<br>0x927C MakerNote tag
 * `options.userComment` type: `bool` default: `false`
 <br>0x9286 UserComment tag
 
@@ -560,8 +565,8 @@ Enables looking for more than just a single segment of ICC or XMP (XMP Extended)
 Side effect: Disables chunked reading. The whole file has to be read to locate all segments.
 
 When is it useful:
-* VR photos with combination of left/right eye (XMP Extended) 
-* "Portrait mode" photo that contains depth map (XMP Extended) 
+* VR photos with combination of left/right eye (XMP Extended)
+* "Portrait mode" photo that contains depth map (XMP Extended)
 * Photos with custom ICC color profile
 
 Sub-options:
@@ -624,7 +629,7 @@ Type: `number`
 <br>
 Default: `512` Bytes in Node / `65536` (64 KB) in browser
 
-Size (in bytes) of the first chunk that probes the file for traces of exif or metadata. 
+Size (in bytes) of the first chunk that probes the file for traces of exif or metadata.
 
 *In browser, it's usually better to read just a larger chunk in hope that it contains the whole EXIF (and not just the beginning) instead of loading multiple subsequent chunks. Whereas in Node.js it's preferable to read as little data as possible and `fs.read()` does not cause slowdowns.*
 
@@ -846,7 +851,7 @@ EXIF Data are mostly numeric enums, stored under numeric code. Dictionaries are 
 * **Value dict** translates vales from enum to string description (`Orientation` becomes `'Rotate 180'` instead of `3`)
 * **Reviver** further modifies the value (converts date string to an instance of `Date`)
 
-Exifr's dictionaries are based on [exiftool.org](https://exiftool.org). Specifically these: 
+Exifr's dictionaries are based on [exiftool.org](https://exiftool.org). Specifically these:
 TIFF ([EXIF](https://exiftool.org/TagNames/EXIF.html) & [GPS](https://exiftool.org/TagNames/GPS.html)),
 [ICC](https://exiftool.org/TagNames/ICC_Profile.html),
 [IPTC](https://exiftool.org/TagNames/IPTC.html),
@@ -935,9 +940,9 @@ Even though IFD0 (Image block) stores pointers to EXIF and GPS blocks and is thu
 
 ```js
 // do this:
-let options = {ifd0: false, exif: true} 
+let options = {ifd0: false, exif: true}
 // not this:
-let options = {exif: true} 
+let options = {exif: true}
 ```
 </details>
 
@@ -1043,7 +1048,7 @@ Contributions are welcome in any form. Suggestions, bug reports, docs improvemen
 
 If you're filing an issue, please include:
 
-* The photo that's missing metadata or causing the bug 
+* The photo that's missing metadata or causing the bug
 * Repo or a sandbox ([like this one](https://github.com/MikeKovarik/exifr/issues/20)) with minimal code where the bug is reproducible.
 
 There are so many environments, tools and frameworks and I can't know, nor try them all out. Letting me peek into your setup makes tracking down the problem so much easier.
