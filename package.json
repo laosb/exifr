@@ -1,6 +1,6 @@
 {
   "name": "@laosb/exifr",
-  "version": "7.2.0",
+  "version": "7.2.1",
   "description": "A fork of exifr, 📷 The fastest and most versatile JavaScript EXIF reading library.",
   "author": "Shibo Lyu",
   "license": "MIT",

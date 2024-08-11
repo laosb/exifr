@@ -1,5 +1,11 @@
 # Changelog
 
+## [7.2.1]
+
+### Fixed
+
+- TypeScript definition for `externalReader`
+
 ## [7.2.0]
 
 ### Added

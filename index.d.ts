@@ -28,7 +28,7 @@ interface FormatOptions {
 interface Options extends FormatOptions {
 	// TIFF segment IFD blocks
 	tiff?: FormatOptions | boolean,
-	ifd0?: FormatOptions, // cannot be disabled. 
+	ifd0?: FormatOptions, // cannot be disabled.
 	ifd1?: FormatOptions | boolean,
 	exif?: FormatOptions | boolean,
 	gps?: FormatOptions | boolean,
@@ -50,7 +50,7 @@ interface Options extends FormatOptions {
 	firstChunkSize?: number,
 	chunkSize?: number,
 	chunkLimit?: number,
-	externalReader?: function,
+	externalReader?: (input: Input, offset?: number, length?: number) => Promise<ArrayBuffer>,
 }
 
 interface IRotation {
