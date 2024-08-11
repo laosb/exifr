@@ -1,6 +1,11 @@
 # Changelog
 
-## [Unreleased]
+## [7.2.0]
+
+### Added
+
+- Vite support ([PR #93 on original repo](https://github.com/MikeKovarik/exifr/pull/93))
+- `externalReader` option ([PR #57 on original repo](https://github.com/MikeKovarik/exifr/pull/57))
 
 ## [7.1.3]
 
@@ -210,7 +215,7 @@ Quality-Of-Life release. Improves compatibility and ease of use with various too
 - Older browsers support
 - multiple new output builds (so users can prevent importing unused code)
 - tags filtering (`pick`/`skip` options)
-- `exifr.gps()` 
+- `exifr.gps()`
 
 ### Changed
 - major rewrite of a whole input reader pipeline
